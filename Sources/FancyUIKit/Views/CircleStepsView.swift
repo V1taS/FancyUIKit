@@ -83,10 +83,10 @@ private extension CircleStepsView {
   func applyDefaultBehavior() {
     backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
-    titleLabel.font = RandomFont.primaryMedium18
+    titleLabel.font = fancyFont.primaryMedium18
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     
-    countLabel.font = RandomFont.primaryMedium18
+    countLabel.font = fancyFont.primaryMedium18
     countLabel.textColor = .fancy.only.primaryBlue
   }
   
@@ -102,7 +102,7 @@ private extension CircleStepsView {
       gradientCircle.layer.cornerRadius = appearance.circleStepsSize / 2
       gradientCircle.clipsToBounds = true
       let stepText = UILabel()
-      stepText.font = RandomFont.primaryBold18
+      stepText.font = fancyFont.primaryBold18
       stepText.textColor = .fancy.only.primaryWhite
       stepText.text = "\(step)"
       

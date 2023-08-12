@@ -253,9 +253,9 @@ public final class PlayerView: UIView {
     layer.cornerRadius = appearance.cornerRadius
     gradientView.layer.cornerRadius = appearance.cornerRadius
     
-    emojiLabel.font = RandomFont.primaryMedium18
+    emojiLabel.font = fancyFont.primaryMedium18
     
-    nameLabel.font = RandomFont.primaryBold10
+    nameLabel.font = fancyFont.primaryBold10
     nameLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     nameLabel.numberOfLines = appearance.numberOfLines
     nameLabel.textAlignment = .center

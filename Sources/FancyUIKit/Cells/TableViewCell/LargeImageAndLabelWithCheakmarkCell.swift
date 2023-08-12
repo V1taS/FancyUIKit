@@ -147,7 +147,7 @@ public final class LargeImageAndLabelWithCheakmarkCell: UITableViewCell {
     checkmarkImageView.contentMode = .right
     checkmarkImageView.setContentHuggingPriority(.required, for: .horizontal)
     
-    titleLabel.font = RandomFont.primaryRegular16
+    titleLabel.font = fancyFont.primaryRegular16
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 

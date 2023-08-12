@@ -48,7 +48,7 @@ public final class CustomTextCell: UITableViewCell {
   ///  - textAlignment: Выравнивание текста
   public func configureCellWith(titleText: String?,
                                 textColor: UIColor?,
-                                textFont: UIFont? = RandomFont.primaryRegular18,
+                                textFont: UIFont? = fancyFont.primaryRegular18,
                                 textAlignment: NSTextAlignment) {
     titleLabel.text = titleText
     titleLabel.textColor = textColor
@@ -82,7 +82,7 @@ public final class CustomTextCell: UITableViewCell {
     contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
-    titleLabel.font = RandomFont.primaryRegular18
+    titleLabel.font = fancyFont.primaryRegular18
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.textAlignment = .center
     titleLabel.numberOfLines = .zero

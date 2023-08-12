@@ -78,15 +78,15 @@ private extension ReferralProgramView {
   func applyDefaultBehavior() {
     backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
-    titleLabel.font = RandomFont.primaryBold24
+    titleLabel.font = fancyFont.primaryBold24
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.textAlignment = .center
     
-    firstStepLabel.font = RandomFont.primaryMedium18
+    firstStepLabel.font = fancyFont.primaryMedium18
     firstStepLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     firstStepLabel.numberOfLines = .zero
     
-    secondStepLabel.font = RandomFont.primaryMedium18
+    secondStepLabel.font = fancyFont.primaryMedium18
     secondStepLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     secondStepLabel.numberOfLines = .zero
   }

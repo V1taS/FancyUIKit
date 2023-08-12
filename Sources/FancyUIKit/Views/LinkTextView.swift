@@ -34,7 +34,7 @@ public final class LinkTextView: UITextView {
   }
   
   /// Полнотекстовый шрифт. Шрифт по умолчанию`primaryMedium14`
-  public var defaultTextFont: UIFont? = RandomFont.primaryMedium14 {
+  public var defaultTextFont: UIFont? = fancyFont.primaryMedium14 {
     didSet {
       font = defaultTextFont
     }

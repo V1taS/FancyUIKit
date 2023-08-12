@@ -45,7 +45,7 @@ public final class CustomTextHeaderCollectionCell: UICollectionReusableView {
   ///  - textAlignment: Выравнивание текста
   public func configureCellWith(titleText: String?,
                                 textColor: UIColor?,
-                                textFont: UIFont? = RandomFont.primaryRegular18,
+                                textFont: UIFont? = fancyFont.primaryRegular18,
                                 textAlignment: NSTextAlignment) {
     titleLabel.text = titleText
     titleLabel.textColor = textColor
@@ -77,7 +77,7 @@ public final class CustomTextHeaderCollectionCell: UICollectionReusableView {
   private func applyDefaultBehavior() {
     backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
-    titleLabel.font = RandomFont.primaryRegular18
+    titleLabel.font = fancyFont.primaryRegular18
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.textAlignment = .center
   }

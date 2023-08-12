@@ -121,7 +121,7 @@ private extension PremiumButtonView {
     clipsToBounds = true
     layer.masksToBounds = true
     layer.cornerRadius = Appearance().cornerRadius
-    titleLabel?.font = RandomFont.primaryRegular16
+    titleLabel?.font = fancyFont.primaryRegular16
   }
   
   private func applyGradient(colors: [UIColor], alpha: CGFloat = 1) {

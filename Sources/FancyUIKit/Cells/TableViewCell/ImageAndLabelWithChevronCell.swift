@@ -121,7 +121,7 @@ public final class ImageAndLabelWithChevronCell: UITableViewCell {
     chevronImageView.contentMode = .right
     chevronImageView.setContentHuggingPriority(.required, for: .horizontal)
     
-    titleLabel.font = RandomFont.primaryRegular18
+    titleLabel.font = fancyFont.primaryRegular18
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
   }

@@ -68,7 +68,7 @@ private extension EmoticonSelectionView {
   func applyDefaultBehavior() {
     backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     emoticonTextField.textAlignment = .center
-    emoticonTextField.font = RandomFont.primaryBold24
+    emoticonTextField.font = fancyFont.primaryBold24
     emoticonTextField.isSelected = false
     emoticonTextField.autocorrectionType = .no
     emoticonTextField.smartQuotesType = .no

@@ -52,10 +52,10 @@ public final class CustomDoubleTextHeaderCollectionCell: UICollectionReusableVie
   ///  - editAction: Экшен
   public func configureCellWith(primaryText: String?,
                                 primaryTextColor: UIColor = .fancy.darkAndLightTheme.primaryGray,
-                                primaryTextFont: UIFont = RandomFont.primaryRegular18,
+                                primaryTextFont: UIFont = fancyFont.primaryRegular18,
                                 secondaryText: String?,
                                 secondaryTextColor: UIColor = .fancy.darkAndLightTheme.primaryGray,
-                                secondaryTextFont: UIFont = RandomFont.primaryRegular18,
+                                secondaryTextFont: UIFont = fancyFont.primaryRegular18,
                                 editImage: UIImage? = nil,
                                 editAction: (() -> Void)? = nil) {
     primaryLabel.text = primaryText
@@ -112,12 +112,12 @@ public final class CustomDoubleTextHeaderCollectionCell: UICollectionReusableVie
   private func applyDefaultBehavior() {
     backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
-    secondaryLabel.font = RandomFont.primaryRegular18
+    secondaryLabel.font = fancyFont.primaryRegular18
     secondaryLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     secondaryLabel.textAlignment = .right
     secondaryLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
     
-    primaryLabel.font = RandomFont.primaryRegular18
+    primaryLabel.font = fancyFont.primaryRegular18
     primaryLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     primaryLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
     

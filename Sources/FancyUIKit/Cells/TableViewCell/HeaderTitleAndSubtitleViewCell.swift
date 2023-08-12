@@ -118,13 +118,13 @@ public final class HeaderTitleAndSubtitleViewCell: UITableViewCell {
     selectionStyle = .none
     
     titleLabel.numberOfLines = .zero
-    titleLabel.font = RandomFont.primaryBold32
+    titleLabel.font = fancyFont.primaryBold32
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.textAlignment = .center
     titleLabel.setContentHuggingPriority(.required, for: .vertical)
     
     subtitleLabel.numberOfLines = .zero
-    subtitleLabel.font = RandomFont.primaryMedium18
+    subtitleLabel.font = fancyFont.primaryMedium18
     subtitleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     subtitleLabel.textAlignment = .center
     subtitleLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)

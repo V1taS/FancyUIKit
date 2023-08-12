@@ -35,7 +35,7 @@ public final class TextFieldView: UITextField {
     backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     borderStyle = .roundedRect
     textAlignment = .center
-    font = RandomFont.primaryRegular16
+    font = fancyFont.primaryRegular16
     textColor = .fancy.darkAndLightTheme.primaryGray
   }
 }

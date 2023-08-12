@@ -49,7 +49,7 @@ public final class TextFieldGrayWithEmoticonCell: UITableViewCell {
                                 actionEmoticon: ((_ emoticon: Character?,
                                                   _ style: EmoticonSelectionView.Style) -> Void)?) {
     self.textField = textField
-    textField.font = RandomFont.primaryMedium18
+    textField.font = fancyFont.primaryMedium18
     textField.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     emoticonSelectionView.configureWith(emoticon: emoticon, actionEmoticon: actionEmoticon)
     if let textFieldBorderColor = textFieldBorderColor {

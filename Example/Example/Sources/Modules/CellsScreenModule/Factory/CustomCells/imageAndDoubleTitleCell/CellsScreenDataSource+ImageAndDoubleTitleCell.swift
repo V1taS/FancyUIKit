@@ -32,7 +32,7 @@ extension CellsScreenDataSource where Model == ImageAndDoubleTitleCellModel {
                                    primaryText: "ImageAndDoubleTitleCellModel",
                                    secondaryText: "10",
                                    secondaryTextColor: fancyColor.only.primaryRed,
-                                   secondaryTextFont: RandomFont.primaryBold18)
+                                   secondaryTextFont: fancyFont.primaryBold18)
     ]
     
     return CellsScreenDataSource(models: models) { (model, cell) in

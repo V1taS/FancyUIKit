@@ -79,14 +79,14 @@ public final class FilmView: UIView {
 private extension FilmView {
   func applyDefaultBehavior() {
     titleLabel.textAlignment = .center
-    titleLabel.font = RandomFont.primaryBold70
+    titleLabel.font = fancyFont.primaryBold70
     titleLabel.textColor = .fancy.only.primaryWhite
     titleLabel.numberOfLines = 2
     titleLabel.adjustsFontSizeToFitWidth = true
     titleLabel.minimumScaleFactor = 0.5
     
     descriptionLabel.textAlignment = .center
-    descriptionLabel.font = RandomFont.primaryMedium16
+    descriptionLabel.font = fancyFont.primaryMedium16
     descriptionLabel.textColor = .fancy.only.lightGray
     descriptionLabel.numberOfLines = 3
     

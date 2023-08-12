@@ -132,7 +132,7 @@ public final class SquircleImageAndLabelWithSegmentedControlCell: UITableViewCel
     contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
 
-    titleLabel.font = RandomFont.primaryRegular18
+    titleLabel.font = fancyFont.primaryRegular18
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 

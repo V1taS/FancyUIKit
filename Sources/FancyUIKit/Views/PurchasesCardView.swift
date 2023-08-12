@@ -176,24 +176,24 @@ private extension PurchasesCardView {
     let appearance = Appearance()
     
     headerTitleLabel.textAlignment = .center
-    headerTitleLabel.font = RandomFont.primaryBold14
+    headerTitleLabel.font = fancyFont.primaryBold14
     headerTitleLabel.textColor = .fancy.only.primaryWhite
     headerTitleLabel.numberOfLines = appearance.numberOfLines
     
     titleLabel.textAlignment = .center
-    titleLabel.font = RandomFont.primaryMedium48
+    titleLabel.font = fancyFont.primaryMedium48
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.numberOfLines = appearance.numberOfLines
     titleLabel.setContentHuggingPriority(.required, for: .vertical)
     
     descriptionLabel.textAlignment = .center
-    descriptionLabel.font = RandomFont.primaryMedium18
+    descriptionLabel.font = fancyFont.primaryMedium18
     descriptionLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     descriptionLabel.numberOfLines = appearance.numberOfLines
     descriptionLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
     
     amountLabel.textAlignment = .center
-    amountLabel.font = RandomFont.primaryBold24
+    amountLabel.font = fancyFont.primaryBold24
     amountLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     amountLabel.numberOfLines = appearance.numberOfLines
     amountLabel.setContentHuggingPriority(.required, for: .vertical)

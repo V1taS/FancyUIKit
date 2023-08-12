@@ -77,7 +77,7 @@ private extension LinkCopyView {
     clipsToBounds = true
     
     linkLabel.textColor = .fancy.only.primaryBlue
-    linkLabel.font = RandomFont.primaryRegular16
+    linkLabel.font = fancyFont.primaryRegular16
     
     let configuration = UIImage.SymbolConfiguration(pointSize: 15, weight: .regular)
     let copyButtonImage = UIImage(systemName: appearance.copyButtonName)?.withConfiguration(configuration)

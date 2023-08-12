@@ -124,7 +124,7 @@ public final class CardLockView: UIView {
     let appearance = Appearance()
     backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
-    titleLabel.font = RandomFont.primaryMedium16
+    titleLabel.font = fancyFont.primaryMedium16
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.numberOfLines = appearance.numberOfLines
     titleLabel.textAlignment = .center
@@ -133,9 +133,9 @@ public final class CardLockView: UIView {
     imageView.layer.cornerRadius = appearance.cornerRadius
     imageView.clipsToBounds = true
     lockLabelView.text = "🔒"
-    lockLabelView.font = .randomFont.primaryRegular32
+    lockLabelView.font = fancyFont.primaryRegular32
     checkmarkView.text = "✅"
-    checkmarkView.font = .randomFont.primaryRegular24
+    checkmarkView.font = fancyFont.primaryRegular24
     
     titleLabel.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
     imageView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)

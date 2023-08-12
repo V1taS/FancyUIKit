@@ -72,7 +72,7 @@ public final class LinkTextViewCell: UITableViewCell {
     linkTextView.addLinks([:])
 
     linkTextView.defaultTextColor = .fancy.darkAndLightTheme.primaryGray
-    linkTextView.defaultTextFont = RandomFont.primaryMedium14
+    linkTextView.defaultTextFont = fancyFont.primaryMedium14
     linkTextView.linkColor = .fancy.only.primaryBlue
     linkTextView.defaultTextAlignment = .center
     linkTextView.actionLinkTap = nil

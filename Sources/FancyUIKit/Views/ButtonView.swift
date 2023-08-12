@@ -83,7 +83,7 @@ public final class ButtonView: UIButton {
   
   private func applyDefaultBehavior() {
     setTitleColor(.fancy.darkAndLightTheme.primaryWhite, for: .normal)
-    titleLabel?.font = RandomFont.primaryMedium18
+    titleLabel?.font = fancyFont.primaryMedium18
     layer.cornerRadius = Appearance().cornerRadius
     
     applyGradient(colors: gradientBackground)

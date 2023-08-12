@@ -13,7 +13,7 @@ let package = Package(
     ),
   ],
   dependencies: [
-    .package(url: "https://github.com/V1taS/FancyStyle.git", from: "1.3.0"),
+    .package(url: "https://github.com/V1taS/FancyStyle.git", from: "1.4.0"),
     .package(url: "https://github.com/airbnb/lottie-ios.git", from: "4.2.0")
   ],
   targets: [

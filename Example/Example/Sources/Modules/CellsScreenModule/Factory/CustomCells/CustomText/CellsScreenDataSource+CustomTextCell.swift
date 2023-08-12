@@ -44,7 +44,7 @@ extension CellsScreenDataSource where Model == CustomTextCellModel {
       }
       cell.configureCellWith(titleText: model.titleText,
                              textColor: model.textColor,
-                             textFont: RandomFont.primaryRegular16,
+                             textFont: fancyFont.primaryRegular16,
                              textAlignment: model.textAlignment)
     }
   }

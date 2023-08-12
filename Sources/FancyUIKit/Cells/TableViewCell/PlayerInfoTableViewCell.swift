@@ -63,10 +63,10 @@ public final class PlayerInfoTableViewCell: UITableViewCell {
   public func configureCellWith(avatar: UIImage?,
                                 namePlayer: String?,
                                 namePlayerColor: UIColor = .fancy.darkAndLightTheme.primaryGray,
-                                namePlayerFont: UIFont = RandomFont.primaryMedium18,
+                                namePlayerFont: UIFont = fancyFont.primaryMedium18,
                                 nameTeam: String?,
                                 nameTeamColor: UIColor = .fancy.only.primaryBlue,
-                                nameTeamFont: UIFont = RandomFont.primaryRegular16,
+                                nameTeamFont: UIFont = fancyFont.primaryRegular16,
                                 emoji: Character? = "⚪️",
                                 emojiMenu: UIMenu? = nil,
                                 emojiMenuPrimaryAction: Bool = false,
@@ -164,17 +164,17 @@ public final class PlayerInfoTableViewCell: UITableViewCell {
     
     avatarImageView.contentMode = .scaleAspectFit
     
-    namePlayerLabel.font = RandomFont.primaryMedium18
+    namePlayerLabel.font = fancyFont.primaryMedium18
     namePlayerLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     namePlayerLabel.numberOfLines = appearance.numberOfLines
     namePlayerLabel.textAlignment = .left
     
-    nameTeamLabel.font = RandomFont.primaryRegular16
+    nameTeamLabel.font = fancyFont.primaryRegular16
     nameTeamLabel.textColor = .fancy.only.primaryBlue
     nameTeamLabel.numberOfLines = appearance.numberOfLines
     nameTeamLabel.textAlignment = .left
     
-    emojiButton.titleLabel?.font = RandomFont.primaryMedium18
+    emojiButton.titleLabel?.font = fancyFont.primaryMedium18
     emojiButton.setContentHuggingPriority(.required, for: .horizontal)
     
     stackView.axis = .vertical

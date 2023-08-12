@@ -92,7 +92,7 @@ private extension ImageAndLabelWithButtonBigView {
     clipsToBounds = true
     layer.cornerRadius = Appearance().cornerRadius
     
-    titleLabel.font = RandomFont.primaryMedium18
+    titleLabel.font = fancyFont.primaryMedium18
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
     

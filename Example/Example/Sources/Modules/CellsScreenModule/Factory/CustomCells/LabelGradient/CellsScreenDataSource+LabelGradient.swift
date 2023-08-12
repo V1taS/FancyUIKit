@@ -57,7 +57,7 @@ extension CellsScreenDataSource where Model == LabelGradientModel {
           fancyColor.only.primaryBlue,
           fancyColor.darkAndLightTheme.primaryBlack
         ],
-        font: RandomFont.primaryBold50,
+        font: fancyFont.primaryBold50,
         textColor: fancyColor.only.primaryRed,
         borderWidth: 2,
         borderColor: fancyColor.only.primaryRed,

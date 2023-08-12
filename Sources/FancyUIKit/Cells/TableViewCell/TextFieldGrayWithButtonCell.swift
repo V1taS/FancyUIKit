@@ -51,7 +51,7 @@ public final class TextFieldGrayWithButtonCell: UITableViewCell {
                                 buttonImageColor: UIColor? = .fancy.only.primaryGreen,
                                 buttonAction: (() -> Void)? = nil) {
     self.textField = textField
-    textField.font = RandomFont.primaryMedium18
+    textField.font = fancyFont.primaryMedium18
     textField.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     if let textFieldBorderColor = textFieldBorderColor {
       self.textField?.layer.borderColor = textFieldBorderColor.cgColor

@@ -110,7 +110,7 @@ public final class MainCardView: UIView {
     let appearance = Appearance()
     
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryWhite
-    titleLabel.font = RandomFont.primaryMedium18
+    titleLabel.font = fancyFont.primaryMedium18
     titleLabel.numberOfLines = 2
     titleLabel.textAlignment = .right
     imageView.contentMode = .scaleAspectFit

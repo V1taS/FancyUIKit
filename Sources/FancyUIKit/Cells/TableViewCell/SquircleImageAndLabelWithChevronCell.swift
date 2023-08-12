@@ -141,7 +141,7 @@ public final class SquircleImageAndLabelWithChevronCell: UITableViewCell {
     chevronImageView.contentMode = .right
     chevronImageView.setContentHuggingPriority(.required, for: .horizontal)
     
-    titleLable.font = RandomFont.primaryRegular18
+    titleLable.font = fancyFont.primaryRegular18
     titleLable.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLable.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
   }

@@ -51,10 +51,10 @@ public final class DoubleTitleCell: UITableViewCell {
   ///  - secondaryTextFont: Вторичный шрифт текст
   public func configureCellWith(primaryText: String?,
                                 primaryTextColor: UIColor = .fancy.darkAndLightTheme.primaryGray,
-                                primaryTextFont: UIFont = RandomFont.primaryRegular18,
+                                primaryTextFont: UIFont = fancyFont.primaryRegular18,
                                 secondaryText: String?,
                                 secondaryTextColor: UIColor = .fancy.darkAndLightTheme.primaryGray,
-                                secondaryTextFont: UIFont = RandomFont.primaryRegular18) {
+                                secondaryTextFont: UIFont = fancyFont.primaryRegular18) {
     primaryLabel.text = primaryText
     primaryLabel.textColor = primaryTextColor
     primaryLabel.font = primaryTextFont
@@ -96,12 +96,12 @@ public final class DoubleTitleCell: UITableViewCell {
     contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
-    secondaryLabel.font = RandomFont.primaryRegular18
+    secondaryLabel.font = fancyFont.primaryRegular18
     secondaryLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     secondaryLabel.textAlignment = .right
     secondaryLabel.setContentHuggingPriority(.required, for: .horizontal)
     
-    primaryLabel.font = RandomFont.primaryRegular18
+    primaryLabel.font = fancyFont.primaryRegular18
     primaryLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     primaryLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
   }

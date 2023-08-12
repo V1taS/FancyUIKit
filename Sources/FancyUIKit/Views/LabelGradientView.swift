@@ -87,7 +87,7 @@ public final class LabelGradientView: UIView {
     layer.cornerRadius = Appearance().cornerRadius
     
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryWhite
-    titleLabel.font =  RandomFont.primaryRegular16
+    titleLabel.font =  fancyFont.primaryRegular16
   }
   
   private func applyGradient(colors: [UIColor]) {

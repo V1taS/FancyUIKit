@@ -16,10 +16,10 @@ struct PlayerInfoModel: CellModel {
   let avatar: UIImage?
   let namePlayer: String?
   var namePlayerColor: UIColor = fancyColor.darkAndLightTheme.primaryGray
-  var namePlayerFont: UIFont = RandomFont.primaryMedium18
+  var namePlayerFont: UIFont = fancyFont.primaryMedium18
   let nameTeam: String?
   var nameTeamColor: UIColor = fancyColor.only.primaryBlue
-  var nameTeamFont: UIFont = RandomFont.primaryRegular16
+  var nameTeamFont: UIFont = fancyFont.primaryRegular16
   let emoji: Character?
   
   private var menuItems: [UIAction] {

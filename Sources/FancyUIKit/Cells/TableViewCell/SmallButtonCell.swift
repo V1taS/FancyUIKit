@@ -82,7 +82,7 @@ public final class SmallButtonCell: UITableViewCell {
     contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
-    button.titleLabel?.font = RandomFont.primaryRegular18
+    button.titleLabel?.font = fancyFont.primaryRegular18
     button.setTitleColor(.fancy.only.primaryBlue, for: .normal)
     button.titleLabel?.textAlignment = .center
     button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)

@@ -96,7 +96,7 @@ private extension OnboardingContainerView {
     
     titleLabel.textAlignment = .center
     titleLabel.numberOfLines = 1
-    titleLabel.font = RandomFont.primaryBold32
+    titleLabel.font = fancyFont.primaryBold32
     titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
@@ -107,7 +107,7 @@ private extension OnboardingContainerView {
     descriptionLabel.numberOfLines = 2
     descriptionLabel.adjustsFontSizeToFitWidth = true
     descriptionLabel.minimumScaleFactor = 0.9
-    descriptionLabel.font = RandomFont.primaryMedium18
+    descriptionLabel.font = fancyFont.primaryMedium18
     descriptionLabel.textColor = .fancy.darkAndLightTheme.primaryGray
   }
 }
