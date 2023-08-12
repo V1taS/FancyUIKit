@@ -1,5 +1,7 @@
 # Fancy UIKit
 
+![Logo](https://sosinvitalii.com/wp-content/uploads/2023/08/IMG_7082-2.png "Fancy UIKit")
+
 ### Start Example
 
 Generate and run project
