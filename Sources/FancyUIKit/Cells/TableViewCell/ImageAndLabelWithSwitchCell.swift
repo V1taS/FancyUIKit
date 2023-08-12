@@ -48,13 +48,13 @@ public final class ImageAndLabelWithSwitchCell: UITableViewCell {
   ///  - titleText: Заголовок у ячейки
   ///  - isResultSwitch: Значение у переключателя
   public func configureCellWith(leftSideImage: UIImage?,
-                                leftSideImageColor: UIColor? = RandomColor.darkAndLightTheme.primaryGray,
+                                leftSideImageColor: UIColor? = .fancy.darkAndLightTheme.primaryGray,
                                 titleText: String?,
                                 isResultSwitch: Bool) {
     titleLabel.text = titleText
     resultSwitch.isOn = isResultSwitch
     leftSideImageView.image = leftSideImage
-    leftSideImageView.setImageColor(color: leftSideImageColor ?? RandomColor.darkAndLightTheme.primaryGray)
+    leftSideImageView.setImageColor(color: leftSideImageColor ?? .fancy.darkAndLightTheme.primaryGray)
   }
   
   public override func prepareForReuse() {
@@ -94,12 +94,12 @@ public final class ImageAndLabelWithSwitchCell: UITableViewCell {
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
     titleLabel.font = RandomFont.primaryRegular18
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 
     resultSwitch.setContentHuggingPriority(.required, for: .horizontal)

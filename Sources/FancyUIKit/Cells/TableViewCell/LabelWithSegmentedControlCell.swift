@@ -93,12 +93,12 @@ public final class LabelWithSegmentedControlCell: UITableViewCell {
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
     titleLabel.font = RandomFont.primaryRegular18
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
     
     segmentedControl.setContentHuggingPriority(.required, for: .horizontal)

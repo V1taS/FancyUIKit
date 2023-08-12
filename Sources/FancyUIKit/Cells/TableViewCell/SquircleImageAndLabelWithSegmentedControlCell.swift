@@ -61,7 +61,7 @@ public final class SquircleImageAndLabelWithSegmentedControlCell: UITableViewCel
                                 segmentControlValueChanged: ((_ selectedSegmentIndex: Int) -> Void)? = nil) {
     titleLabel.text = titleText
     leftSideImageView.image = leftSideImage
-    leftSideImageView.setImageColor(color: leftSideImageColor ?? RandomColor.darkAndLightTheme.primaryGray)
+    leftSideImageView.setImageColor(color: leftSideImageColor ?? .fancy.darkAndLightTheme.primaryGray)
     leftSideSquircleView.applyGradient(colors: squircleBGColors,
                                        alpha: squircleBGAlpha)
 
@@ -128,12 +128,12 @@ public final class SquircleImageAndLabelWithSegmentedControlCell: UITableViewCel
   }
 
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
 
     titleLabel.font = RandomFont.primaryRegular18
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 
     segmentedControl.setContentHuggingPriority(.required, for: .horizontal)

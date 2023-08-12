@@ -28,15 +28,15 @@ public final class TextFieldView: UITextField {
     let appearance = Appearance()
     
     layer.borderWidth = appearance.borderWidth
-    layer.borderColor = RandomColor.darkAndLightTheme.primaryGray.cgColor
+    layer.borderColor = .fancy.darkAndLightTheme.primaryGray.cgColor
     layer.cornerRadius = appearance.cornerRadius
     clipsToBounds = true
     
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     borderStyle = .roundedRect
     textAlignment = .center
     font = RandomFont.primaryRegular16
-    textColor = RandomColor.darkAndLightTheme.primaryGray
+    textColor = .fancy.darkAndLightTheme.primaryGray
   }
 }
 

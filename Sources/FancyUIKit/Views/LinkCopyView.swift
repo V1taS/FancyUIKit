@@ -70,13 +70,13 @@ private extension LinkCopyView {
   func applyDefaultBehavior() {
     let appearance = Appearance()
     
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     layer.cornerRadius = appearance.cornerRadius
     layer.borderWidth = 1
-    layer.borderColor = RandomColor.darkAndLightTheme.primaryGray.cgColor
+    layer.borderColor = .fancy.darkAndLightTheme.primaryGray.cgColor
     clipsToBounds = true
     
-    linkLabel.textColor = RandomColor.only.primaryBlue
+    linkLabel.textColor = .fancy.only.primaryBlue
     linkLabel.font = RandomFont.primaryRegular16
     
     let configuration = UIImage.SymbolConfiguration(pointSize: 15, weight: .regular)
@@ -85,10 +85,10 @@ private extension LinkCopyView {
     copyButton.layer.cornerRadius = .zero
     copyButton.setImage(copyButtonImage, for: .normal)
     copyButton.gradientBackground = [
-      RandomColor.only.primaryGreen,
-      RandomColor.only.secondaryGreen
+      .fancy.only.primaryGreen,
+      .fancy.only.secondaryGreen
     ]
-    copyButton.tintColor = RandomColor.only.primaryWhite
+    copyButton.tintColor = .fancy.only.primaryWhite
     copyButton.addTarget(self, action: #selector(copyButtonAction), for: .touchUpInside)
   }
   

@@ -42,9 +42,9 @@ public final class PlayerView: UIView {
     var nameTextColor: UIColor {
       switch self {
       case .defaultStyle:
-        return RandomColor.only.primaryWhite
+        return .fancy.only.primaryWhite
       default:
-        return RandomColor.only.primaryWhite
+        return .fancy.only.primaryWhite
       }
     }
     
@@ -52,29 +52,29 @@ public final class PlayerView: UIView {
     var backgroundColor: [UIColor] {
       switch self {
       case .darkGreen:
-        return [RandomColor.only.primaryGray,
-                RandomColor.only.primaryGreen]
+        return [.fancy.only.primaryGray,
+                .fancy.only.primaryGreen]
       case .defaultStyle:
-        return [RandomColor.only.lightGray,
-                RandomColor.only.lightGray]
+        return [.fancy.only.lightGray,
+                .fancy.only.lightGray]
       case .darkBlue:
-        return [RandomColor.only.primaryGray,
-                RandomColor.only.secondaryBlue]
+        return [.fancy.only.primaryGray,
+                .fancy.only.secondaryBlue]
       case .darkOrange:
-        return [RandomColor.only.primaryGray,
-                RandomColor.only.primaryOrange]
+        return [.fancy.only.primaryGray,
+                .fancy.only.primaryOrange]
       case .darkRed:
-        return [RandomColor.only.primaryGray,
-                RandomColor.only.primaryRed]
+        return [.fancy.only.primaryGray,
+                .fancy.only.primaryRed]
       case .darkPurple:
-        return [RandomColor.only.primaryGray,
-                RandomColor.only.primaryPurple]
+        return [.fancy.only.primaryGray,
+                .fancy.only.primaryPurple]
       case .darkPink:
-        return [RandomColor.only.primaryGray,
-                RandomColor.only.primaryPink]
+        return [.fancy.only.primaryGray,
+                .fancy.only.primaryPink]
       case .darkYellow:
-        return [RandomColor.only.primaryGray,
-                RandomColor.only.primaryYellow]
+        return [.fancy.only.primaryGray,
+                .fancy.only.primaryYellow]
       }
     }
   }
@@ -249,14 +249,14 @@ public final class PlayerView: UIView {
   
   private func applyDefaultBehavior() {
     let appearance = Appearance()
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     layer.cornerRadius = appearance.cornerRadius
     gradientView.layer.cornerRadius = appearance.cornerRadius
     
     emojiLabel.font = RandomFont.primaryMedium18
     
     nameLabel.font = RandomFont.primaryBold10
-    nameLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    nameLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     nameLabel.numberOfLines = appearance.numberOfLines
     nameLabel.textAlignment = .center
     

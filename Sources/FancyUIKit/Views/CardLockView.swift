@@ -122,10 +122,10 @@ public final class CardLockView: UIView {
   
   private func applyDefaultBehavior() {
     let appearance = Appearance()
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
     titleLabel.font = RandomFont.primaryMedium16
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.numberOfLines = appearance.numberOfLines
     titleLabel.textAlignment = .center
     

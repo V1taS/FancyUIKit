@@ -55,7 +55,7 @@ public final class MainCardView: UIView {
                             isShowADVLabel: Bool,
                             titleADVText: String?,
                             isDisabled: Bool) {
-    let colorWhite = isDisabled ? RandomColor.only.secondaryWhite : RandomColor.darkAndLightTheme.primaryWhite
+    let colorWhite = isDisabled ? fancyColor.only.secondaryWhite : fancyColor.darkAndLightTheme.primaryWhite
     imageView.image = imageCard
     titleLabel.text = titleCard
     titleLabel.textColor = colorWhite
@@ -63,8 +63,8 @@ public final class MainCardView: UIView {
     
     advLabelView.configureWith(titleText: titleADVText,
                                textColor: colorWhite,
-                               gradientDVLabel: [RandomColor.only.primaryRed,
-                                                 RandomColor.only.primaryPink])
+                               gradientDVLabel: [.fancy.only.primaryRed,
+                                                 .fancy.only.primaryPink])
     imageView.setImageColor(color: colorWhite)
     isDisabledCard = isDisabled
     applyGradient()
@@ -109,7 +109,7 @@ public final class MainCardView: UIView {
   private func applyDefaultBehavior() {
     let appearance = Appearance()
     
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryWhite
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryWhite
     titleLabel.font = RandomFont.primaryMedium18
     titleLabel.numberOfLines = 2
     titleLabel.textAlignment = .right
@@ -126,13 +126,13 @@ public final class MainCardView: UIView {
     
     if isDisabledCard {
       colors = [
-        RandomColor.only.primaryGray,
-        RandomColor.only.secondaryGray
+        .fancy.only.primaryGray,
+        .fancy.only.secondaryGray
       ]
     } else {
       colors = [
-        RandomColor.only.primaryGreen,
-        RandomColor.only.secondaryGreen
+        .fancy.only.primaryGreen,
+        .fancy.only.secondaryGreen
       ]
     }
     

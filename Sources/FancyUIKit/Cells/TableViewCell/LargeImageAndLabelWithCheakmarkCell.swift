@@ -44,22 +44,22 @@ public final class LargeImageAndLabelWithCheakmarkCell: UITableViewCell {
   
   public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesBegan(touches, with: event)
-    backgroundColor = RandomColor.darkAndLightTheme.secondaryGray.withAlphaComponent(0.1)
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.secondaryGray.withAlphaComponent(0.1)
+    backgroundColor = .fancy.darkAndLightTheme.secondaryGray.withAlphaComponent(0.1)
+    contentView.backgroundColor = .fancy.darkAndLightTheme.secondaryGray.withAlphaComponent(0.1)
   }
   
   public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesEnded(touches, with: event)
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     action?(!checkmarkImageView.isHidden)
     impactFeedback.impactOccurred()
   }
   
   public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesCancelled(touches, with: event)
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
   }
   
   /// Установить галочку справа
@@ -89,7 +89,7 @@ public final class LargeImageAndLabelWithCheakmarkCell: UITableViewCell {
     checkmarkImageView.isHidden = !setIsCheckmark
     lockLabelView.isHidden = !setIsLocked
     checkmarkImageView.image = Appearance().checkmarkImage
-    checkmarkImageView.setImageColor(color: RandomColor.only.primaryBlue)
+    checkmarkImageView.setImageColor(color: .fancy.only.primaryBlue)
     leftSideImageView.image = leftSideImage
   }
   
@@ -140,15 +140,15 @@ public final class LargeImageAndLabelWithCheakmarkCell: UITableViewCell {
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
     checkmarkImageView.contentMode = .right
     checkmarkImageView.setContentHuggingPriority(.required, for: .horizontal)
     
     titleLabel.font = RandomFont.primaryRegular16
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 
     leftSideSquircleView.clipsToBounds = true

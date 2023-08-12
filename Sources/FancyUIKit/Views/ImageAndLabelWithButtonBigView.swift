@@ -28,7 +28,7 @@ public final class ImageAndLabelWithButtonBigView: UIView {
   public var style: Style = .none {
     didSet {
       layer.borderWidth = 2
-      layer.borderColor = style == .selected ? RandomColor.only.primaryBlue.cgColor : UIColor.clear.cgColor
+      layer.borderColor = style == .selected ? .fancy.only.primaryBlue.cgColor : UIColor.clear.cgColor
     }
   }
   
@@ -88,12 +88,12 @@ public final class ImageAndLabelWithButtonBigView: UIView {
 
 private extension ImageAndLabelWithButtonBigView {
   func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.secondaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.secondaryWhite
     clipsToBounds = true
     layer.cornerRadius = Appearance().cornerRadius
     
     titleLabel.font = RandomFont.primaryMedium18
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
     
     rightButtonView.setContentHuggingPriority(.required, for: .horizontal)

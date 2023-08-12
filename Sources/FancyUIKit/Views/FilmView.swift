@@ -80,28 +80,28 @@ private extension FilmView {
   func applyDefaultBehavior() {
     titleLabel.textAlignment = .center
     titleLabel.font = RandomFont.primaryBold70
-    titleLabel.textColor = RandomColor.only.primaryWhite
+    titleLabel.textColor = .fancy.only.primaryWhite
     titleLabel.numberOfLines = 2
     titleLabel.adjustsFontSizeToFitWidth = true
     titleLabel.minimumScaleFactor = 0.5
     
     descriptionLabel.textAlignment = .center
     descriptionLabel.font = RandomFont.primaryMedium16
-    descriptionLabel.textColor = RandomColor.only.lightGray
+    descriptionLabel.textColor = .fancy.only.lightGray
     descriptionLabel.numberOfLines = 3
     
     imageBackroundView.contentMode = .scaleAspectFill
     
     
-    generateButton.setTitleColor(RandomColor.only.darkApple, for: .normal)
+    generateButton.setTitleColor(.fancy.only.darkApple, for: .normal)
     
     gradientView.applyGradient(
       colors: [
-        .randomColor.only.darkApple,
+        fancyColor.only.darkApple,
         .clear,
         .clear,
-        .randomColor.only.darkApple,
-        .randomColor.only.darkApple,
+        fancyColor.only.darkApple,
+        fancyColor.only.darkApple,
       ],
       alpha: 0.9
     )

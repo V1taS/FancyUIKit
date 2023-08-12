@@ -17,11 +17,11 @@ public final class PremiumButtonView: UIButton {
     var backgroundColors: [UIColor] {
       switch self {
       case .premium:
-        return [RandomColor.only.primaryGreen,
-                RandomColor.only.secondaryGreen]
+        return [.fancy.only.primaryGreen,
+                .fancy.only.secondaryGreen]
       case .nonPremium:
-        return [RandomColor.only.primaryRed,
-                RandomColor.only.primaryPink]
+        return [.fancy.only.primaryRed,
+                .fancy.only.primaryPink]
       }
     }
     
@@ -97,11 +97,11 @@ public final class PremiumButtonView: UIButton {
     titleLabel?.layer.add(shadowAnimation, forKey: "buttonShadowAnimation")
     switch style {
     case .premium:
-      setTitleColor(RandomColor.darkAndLightTheme.primaryGray, for: .normal)
-      titleLabel?.layer.shadowColor = RandomColor.only.primaryGreen.cgColor
+      setTitleColor(.fancy.darkAndLightTheme.primaryGray, for: .normal)
+      titleLabel?.layer.shadowColor = .fancy.only.primaryGreen.cgColor
     case .nonPremium:
-      setTitleColor(RandomColor.darkAndLightTheme.primaryGray, for: .normal)
-      titleLabel?.layer.shadowColor = RandomColor.only.primaryRed.cgColor
+      setTitleColor(.fancy.darkAndLightTheme.primaryGray, for: .normal)
+      titleLabel?.layer.shadowColor = .fancy.only.primaryRed.cgColor
     }
   }
 }

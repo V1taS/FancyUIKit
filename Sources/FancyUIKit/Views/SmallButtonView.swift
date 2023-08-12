@@ -36,7 +36,7 @@ public final class SmallButtonView: UIButton {
   }
   
   private func applyDefaultBehavior() {
-    setTitleColor(RandomColor.darkAndLightTheme.primaryWhite, for: .normal)
+    setTitleColor(.fancy.darkAndLightTheme.primaryWhite, for: .normal)
     titleLabel?.font = RandomFont.primaryRegular18
   }
 }

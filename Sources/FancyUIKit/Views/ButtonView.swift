@@ -14,8 +14,8 @@ public final class ButtonView: UIButton {
   
   /// Настраиваем фон кнопки
   /// - Parameter gradientBackground: Градиент цветов для кнопки
-  public var gradientBackground = [RandomColor.only.primaryGreen,
-                                   RandomColor.only.secondaryGreen] {
+  public var gradientBackground = [fancyColor.only.primaryGreen,
+                                   fancyColor.only.secondaryGreen] {
     didSet {
       applyGradient(colors: gradientBackground)
     }
@@ -70,8 +70,8 @@ public final class ButtonView: UIButton {
     if isEnabled {
       applyGradient(colors: gradientBackground)
     } else {
-      applyGradient(colors: [RandomColor.darkAndLightTheme.primaryGray,
-                             RandomColor.darkAndLightTheme.secondaryGray])
+      applyGradient(colors: [.fancy.darkAndLightTheme.primaryGray,
+                             .fancy.darkAndLightTheme.secondaryGray])
     }
   }
   
@@ -82,7 +82,7 @@ public final class ButtonView: UIButton {
   }
   
   private func applyDefaultBehavior() {
-    setTitleColor(RandomColor.darkAndLightTheme.primaryWhite, for: .normal)
+    setTitleColor(.fancy.darkAndLightTheme.primaryWhite, for: .normal)
     titleLabel?.font = RandomFont.primaryMedium18
     layer.cornerRadius = Appearance().cornerRadius
     

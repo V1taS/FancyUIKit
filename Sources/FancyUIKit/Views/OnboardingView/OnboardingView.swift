@@ -104,11 +104,11 @@ private extension OnboardingView {
   }
   
   func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
     pageIndicator.hidesForSinglePage = true
-    pageIndicator.currentPageIndicatorTintColor = RandomColor.darkAndLightTheme.primaryGray
-    pageIndicator.pageIndicatorTintColor = RandomColor.only.secondaryGray
+    pageIndicator.currentPageIndicatorTintColor = .fancy.darkAndLightTheme.primaryGray
+    pageIndicator.pageIndicatorTintColor = .fancy.only.secondaryGray
     pageIndicator.addTarget(self,
                             action: #selector(pageIndicatorAction),
                             for: .valueChanged)

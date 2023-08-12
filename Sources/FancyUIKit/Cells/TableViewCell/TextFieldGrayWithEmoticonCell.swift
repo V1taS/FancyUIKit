@@ -50,7 +50,7 @@ public final class TextFieldGrayWithEmoticonCell: UITableViewCell {
                                                   _ style: EmoticonSelectionView.Style) -> Void)?) {
     self.textField = textField
     textField.font = RandomFont.primaryMedium18
-    textField.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    textField.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     emoticonSelectionView.configureWith(emoticon: emoticon, actionEmoticon: actionEmoticon)
     if let textFieldBorderColor = textFieldBorderColor {
       self.textField?.layer.borderColor = textFieldBorderColor.cgColor
@@ -93,8 +93,8 @@ public final class TextFieldGrayWithEmoticonCell: UITableViewCell {
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
   }
 }

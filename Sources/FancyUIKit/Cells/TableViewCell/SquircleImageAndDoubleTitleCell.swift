@@ -56,10 +56,10 @@ public final class SquircleImageAndDoubleTitleCell: UITableViewCell {
                                 leftSideImage: UIImage?,
                                 leftSideImageColor: UIColor?,
                                 primaryText: String?,
-                                primaryTextColor: UIColor = RandomColor.darkAndLightTheme.primaryGray,
+                                primaryTextColor: UIColor = .fancy.darkAndLightTheme.primaryGray,
                                 primaryTextFont: UIFont = RandomFont.primaryRegular18,
                                 secondaryText: String?,
-                                secondaryTextColor: UIColor = RandomColor.darkAndLightTheme.primaryGray,
+                                secondaryTextColor: UIColor = .fancy.darkAndLightTheme.primaryGray,
                                 secondaryTextFont: UIFont = RandomFont.primaryRegular18) {
     primaryLable.text = primaryText
     primaryLable.textColor = primaryTextColor
@@ -69,7 +69,7 @@ public final class SquircleImageAndDoubleTitleCell: UITableViewCell {
     secondaryLabel.textColor = secondaryTextColor
     secondaryLabel.font = secondaryTextFont
     leftSideImageView.image = leftSideImage
-    leftSideImageView.setImageColor(color: leftSideImageColor ?? RandomColor.darkAndLightTheme.primaryGray)
+    leftSideImageView.setImageColor(color: leftSideImageColor ?? .fancy.darkAndLightTheme.primaryGray)
     leftSideSquircleView.applyGradient(colors: squircleBGColors,
                                        alpha: squircleBGAlpha)
   }
@@ -124,17 +124,17 @@ public final class SquircleImageAndDoubleTitleCell: UITableViewCell {
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
     secondaryLabel.font = RandomFont.primaryRegular18
-    secondaryLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    secondaryLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     secondaryLabel.textAlignment = .right
     secondaryLabel.setContentHuggingPriority(.required, for: .horizontal)
     
     primaryLable.font = RandomFont.primaryRegular18
-    primaryLable.textColor = RandomColor.darkAndLightTheme.primaryGray
+    primaryLable.textColor = .fancy.darkAndLightTheme.primaryGray
     primaryLable.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
   }
 }

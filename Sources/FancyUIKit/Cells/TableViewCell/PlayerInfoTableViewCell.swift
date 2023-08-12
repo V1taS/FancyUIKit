@@ -62,10 +62,10 @@ public final class PlayerInfoTableViewCell: UITableViewCell {
   @available(iOS 13.0, *)
   public func configureCellWith(avatar: UIImage?,
                                 namePlayer: String?,
-                                namePlayerColor: UIColor = RandomColor.darkAndLightTheme.primaryGray,
+                                namePlayerColor: UIColor = .fancy.darkAndLightTheme.primaryGray,
                                 namePlayerFont: UIFont = RandomFont.primaryMedium18,
                                 nameTeam: String?,
-                                nameTeamColor: UIColor = RandomColor.only.primaryBlue,
+                                nameTeamColor: UIColor = .fancy.only.primaryBlue,
                                 nameTeamFont: UIFont = RandomFont.primaryRegular16,
                                 emoji: Character? = "⚪️",
                                 emojiMenu: UIMenu? = nil,
@@ -158,19 +158,19 @@ public final class PlayerInfoTableViewCell: UITableViewCell {
   
   private func applyDefaultBehavior() {
     let appearance = Appearance()
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
     avatarImageView.contentMode = .scaleAspectFit
     
     namePlayerLabel.font = RandomFont.primaryMedium18
-    namePlayerLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    namePlayerLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     namePlayerLabel.numberOfLines = appearance.numberOfLines
     namePlayerLabel.textAlignment = .left
     
     nameTeamLabel.font = RandomFont.primaryRegular16
-    nameTeamLabel.textColor = RandomColor.only.primaryBlue
+    nameTeamLabel.textColor = .fancy.only.primaryBlue
     nameTeamLabel.numberOfLines = appearance.numberOfLines
     nameTeamLabel.textAlignment = .left
     

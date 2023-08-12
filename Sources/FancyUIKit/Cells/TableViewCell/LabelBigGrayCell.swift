@@ -66,8 +66,8 @@ private extension LabelBigGrayCell {
   
   func applyDefaultBehavior() {
     selectionStyle = .none
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.secondaryWhite
-    backgroundColor = RandomColor.darkAndLightTheme.secondaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.secondaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.secondaryWhite
     clipsToBounds = true
     layer.cornerRadius = Appearance().cornerRadius
   }

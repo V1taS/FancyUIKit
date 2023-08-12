@@ -81,13 +81,13 @@ private extension CircleStepsView {
   }
   
   func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
     titleLabel.font = RandomFont.primaryMedium18
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     
     countLabel.font = RandomFont.primaryMedium18
-    countLabel.textColor = RandomColor.only.primaryBlue
+    countLabel.textColor = .fancy.only.primaryBlue
   }
   
   func createCircleSteps(currentStep: Int, maxSteps: Int) -> UIView {
@@ -103,15 +103,15 @@ private extension CircleStepsView {
       gradientCircle.clipsToBounds = true
       let stepText = UILabel()
       stepText.font = RandomFont.primaryBold18
-      stepText.textColor = RandomColor.only.primaryWhite
+      stepText.textColor = .fancy.only.primaryWhite
       stepText.text = "\(step)"
       
       if (0...currentStep).contains(step) {
-        gradientCircle.applyGradient(colors: [RandomColor.only.primaryGreen,
-                                              RandomColor.only.secondaryGreen])
+        gradientCircle.applyGradient(colors: [.fancy.only.primaryGreen,
+                                              .fancy.only.secondaryGreen])
       } else {
-        gradientCircle.applyGradient(colors: [RandomColor.only.primaryGray,
-                                              RandomColor.only.secondaryGray])
+        gradientCircle.applyGradient(colors: [.fancy.only.primaryGray,
+                                              .fancy.only.secondaryGray])
       }
       [stepText, gradientCircle].forEach {
         $0.translatesAutoresizingMaskIntoConstraints = false

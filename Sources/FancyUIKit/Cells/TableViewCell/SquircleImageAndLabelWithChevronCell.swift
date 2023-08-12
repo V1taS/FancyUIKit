@@ -42,21 +42,21 @@ public final class SquircleImageAndLabelWithChevronCell: UITableViewCell {
   
   public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesBegan(touches, with: event)
-    backgroundColor = RandomColor.darkAndLightTheme.secondaryGray.withAlphaComponent(0.1)
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.secondaryGray.withAlphaComponent(0.1)
+    backgroundColor = .fancy.darkAndLightTheme.secondaryGray.withAlphaComponent(0.1)
+    contentView.backgroundColor = .fancy.darkAndLightTheme.secondaryGray.withAlphaComponent(0.1)
   }
   
   public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesEnded(touches, with: event)
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     impactFeedback.impactOccurred()
   }
   
   public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesCancelled(touches, with: event)
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
   }
   
   /// Настраиваем ячейку
@@ -76,9 +76,9 @@ public final class SquircleImageAndLabelWithChevronCell: UITableViewCell {
     titleLable.text = titleText
     chevronImageView.isHidden = !isChevron
     chevronImageView.image = Appearance().chevronRight
-    chevronImageView.setImageColor(color: RandomColor.only.primaryBlue)
+    chevronImageView.setImageColor(color: .fancy.only.primaryBlue)
     leftSideImageView.image = leftSideImage
-    leftSideImageView.setImageColor(color: leftSideImageColor ?? RandomColor.darkAndLightTheme.primaryGray)
+    leftSideImageView.setImageColor(color: leftSideImageColor ?? .fancy.darkAndLightTheme.primaryGray)
     leftSideSquircleView.applyGradient(colors: squircleBGColors,
                                        alpha: squircleBGAlpha)
   }
@@ -134,15 +134,15 @@ public final class SquircleImageAndLabelWithChevronCell: UITableViewCell {
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
     chevronImageView.contentMode = .right
     chevronImageView.setContentHuggingPriority(.required, for: .horizontal)
     
     titleLable.font = RandomFont.primaryRegular18
-    titleLable.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLable.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLable.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
   }
 }

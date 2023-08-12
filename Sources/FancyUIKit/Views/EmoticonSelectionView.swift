@@ -29,7 +29,7 @@ public final class EmoticonSelectionView: UIView {
   private var style: Style = .none {
     didSet {
       layer.borderWidth = 1
-      layer.borderColor = style == .selected ? RandomColor.only.primaryBlue.cgColor : RandomColor.only.secondaryGray.cgColor
+      layer.borderColor = style == .selected ? .fancy.only.primaryBlue.cgColor : .fancy.only.secondaryGray.cgColor
     }
   }
   private var dublicateText = ""
@@ -66,7 +66,7 @@ public final class EmoticonSelectionView: UIView {
 
 private extension EmoticonSelectionView {
   func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     emoticonTextField.textAlignment = .center
     emoticonTextField.font = RandomFont.primaryBold24
     emoticonTextField.isSelected = false

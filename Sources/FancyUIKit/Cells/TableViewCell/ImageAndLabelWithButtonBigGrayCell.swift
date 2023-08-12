@@ -91,8 +91,8 @@ private extension ImageAndLabelWithButtonBigGrayCell {
     selectionStyle = .none
     clipsToBounds = true
     layer.cornerRadius = Appearance().cornerRadius
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
   }
 }
 

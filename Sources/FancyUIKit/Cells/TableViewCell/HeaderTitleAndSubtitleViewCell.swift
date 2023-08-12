@@ -113,19 +113,19 @@ public final class HeaderTitleAndSubtitleViewCell: UITableViewCell {
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
     titleLabel.numberOfLines = .zero
     titleLabel.font = RandomFont.primaryBold32
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.textAlignment = .center
     titleLabel.setContentHuggingPriority(.required, for: .vertical)
     
     subtitleLabel.numberOfLines = .zero
     subtitleLabel.font = RandomFont.primaryMedium18
-    subtitleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    subtitleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     subtitleLabel.textAlignment = .center
     subtitleLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
   }

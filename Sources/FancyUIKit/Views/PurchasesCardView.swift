@@ -87,33 +87,33 @@ public final class PurchasesCardView: UIView {
     headerTitleLabel.isHidden = !isSelected
     
     if isSelected {
-      layer.borderColor = RandomColor.only.secondaryGray.cgColor
+      layer.borderColor = .fancy.only.secondaryGray.cgColor
       layer.borderWidth = appearance.borderWidth
       
       containerView.applyGradient(colors:  [
-        RandomColor.only.primaryGray,
-        RandomColor.only.secondaryGray
+        .fancy.only.primaryGray,
+        .fancy.only.secondaryGray
       ])
       
-      applyGradient(colors: [RandomColor.only.primaryGreen,
-                             RandomColor.only.secondaryGreen])
+      applyGradient(colors: [.fancy.only.primaryGreen,
+                             .fancy.only.secondaryGreen])
       
-      titleLabel.textColor = RandomColor.darkAndLightTheme.primaryWhite
-      descriptionLabel.textColor = RandomColor.darkAndLightTheme.primaryWhite
-      amountLabel.textColor = RandomColor.darkAndLightTheme.primaryWhite
+      titleLabel.textColor = .fancy.darkAndLightTheme.primaryWhite
+      descriptionLabel.textColor = .fancy.darkAndLightTheme.primaryWhite
+      amountLabel.textColor = .fancy.darkAndLightTheme.primaryWhite
     } else {
       containerView.applyGradient(colors:  [
-        RandomColor.darkAndLightTheme.primaryWhite,
-        RandomColor.darkAndLightTheme.primaryWhite
+        .fancy.darkAndLightTheme.primaryWhite,
+        .fancy.darkAndLightTheme.primaryWhite
       ])
       layer.borderWidth = .zero
       
-      applyGradient(colors: [RandomColor.darkAndLightTheme.primaryWhite,
-                             RandomColor.darkAndLightTheme.primaryWhite])
+      applyGradient(colors: [.fancy.darkAndLightTheme.primaryWhite,
+                             .fancy.darkAndLightTheme.primaryWhite])
       
-      titleLabel.textColor = RandomColor.only.secondaryGray
-      descriptionLabel.textColor = RandomColor.only.secondaryGray
-      amountLabel.textColor = RandomColor.only.secondaryGray
+      titleLabel.textColor = .fancy.only.secondaryGray
+      descriptionLabel.textColor = .fancy.only.secondaryGray
+      amountLabel.textColor = .fancy.only.secondaryGray
     }
   }
 }
@@ -177,24 +177,24 @@ private extension PurchasesCardView {
     
     headerTitleLabel.textAlignment = .center
     headerTitleLabel.font = RandomFont.primaryBold14
-    headerTitleLabel.textColor = RandomColor.only.primaryWhite
+    headerTitleLabel.textColor = .fancy.only.primaryWhite
     headerTitleLabel.numberOfLines = appearance.numberOfLines
     
     titleLabel.textAlignment = .center
     titleLabel.font = RandomFont.primaryMedium48
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.numberOfLines = appearance.numberOfLines
     titleLabel.setContentHuggingPriority(.required, for: .vertical)
     
     descriptionLabel.textAlignment = .center
     descriptionLabel.font = RandomFont.primaryMedium18
-    descriptionLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    descriptionLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     descriptionLabel.numberOfLines = appearance.numberOfLines
     descriptionLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
     
     amountLabel.textAlignment = .center
     amountLabel.font = RandomFont.primaryBold24
-    amountLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    amountLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     amountLabel.numberOfLines = appearance.numberOfLines
     amountLabel.setContentHuggingPriority(.required, for: .vertical)
     

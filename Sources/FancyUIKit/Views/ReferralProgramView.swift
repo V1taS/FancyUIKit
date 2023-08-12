@@ -76,18 +76,18 @@ public final class ReferralProgramView: UIView {
 
 private extension ReferralProgramView {
   func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
     titleLabel.font = RandomFont.primaryBold24
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.textAlignment = .center
     
     firstStepLabel.font = RandomFont.primaryMedium18
-    firstStepLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    firstStepLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     firstStepLabel.numberOfLines = .zero
     
     secondStepLabel.font = RandomFont.primaryMedium18
-    secondStepLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    secondStepLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     secondStepLabel.numberOfLines = .zero
   }
   

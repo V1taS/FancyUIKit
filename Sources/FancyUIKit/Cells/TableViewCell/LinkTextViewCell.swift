@@ -58,9 +58,9 @@ public final class LinkTextViewCell: UITableViewCell {
     linkTextView.text = fullText
     linkTextView.addLinks(links)
     
-    linkTextView.defaultTextColor = fullTextColor ?? RandomColor.darkAndLightTheme.primaryGray
+    linkTextView.defaultTextColor = fullTextColor ?? .fancy.darkAndLightTheme.primaryGray
     linkTextView.defaultTextFont = fullTextFont
-    linkTextView.linkColor = linkColor ?? RandomColor.only.primaryBlue
+    linkTextView.linkColor = linkColor ?? .fancy.only.primaryBlue
     linkTextView.defaultTextAlignment = fullTextAlignment ?? .center
     linkTextView.actionLinkTap = actionLinkTap
   }
@@ -71,9 +71,9 @@ public final class LinkTextViewCell: UITableViewCell {
     linkTextView.text = nil
     linkTextView.addLinks([:])
 
-    linkTextView.defaultTextColor = RandomColor.darkAndLightTheme.primaryGray
+    linkTextView.defaultTextColor = .fancy.darkAndLightTheme.primaryGray
     linkTextView.defaultTextFont = RandomFont.primaryMedium14
-    linkTextView.linkColor = RandomColor.only.primaryBlue
+    linkTextView.linkColor = .fancy.only.primaryBlue
     linkTextView.defaultTextAlignment = .center
     linkTextView.actionLinkTap = nil
   }
@@ -101,8 +101,8 @@ public final class LinkTextViewCell: UITableViewCell {
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
   }
 }

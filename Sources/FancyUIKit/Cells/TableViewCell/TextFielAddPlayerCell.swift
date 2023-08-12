@@ -51,7 +51,7 @@ public final class TextFielAddPlayerCell: UITableViewCell {
   public func configureCellWith(textField: TextFieldView,
                                 textFieldBorderColor: UIColor? = nil,
                                 buttonImage: UIImage?,
-                                buttonImageColor: UIColor? = RandomColor.only.primaryGreen,
+                                buttonImageColor: UIColor? = .fancy.only.primaryGreen,
                                 listGender: [String],
                                 buttonAction: (() -> Void)? = nil,
                                 genderValueChanged: ((_ selectedSegmentIndex: Int) -> Void)? = nil) {
@@ -116,8 +116,8 @@ public final class TextFielAddPlayerCell: UITableViewCell {
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
     buttonImageView.contentMode = .right

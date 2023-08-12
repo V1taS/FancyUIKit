@@ -51,10 +51,10 @@ public final class CustomDoubleTextHeaderCollectionCell: UICollectionReusableVie
   ///  - editImage: Изображение для кнопки
   ///  - editAction: Экшен
   public func configureCellWith(primaryText: String?,
-                                primaryTextColor: UIColor = RandomColor.darkAndLightTheme.primaryGray,
+                                primaryTextColor: UIColor = .fancy.darkAndLightTheme.primaryGray,
                                 primaryTextFont: UIFont = RandomFont.primaryRegular18,
                                 secondaryText: String?,
-                                secondaryTextColor: UIColor = RandomColor.darkAndLightTheme.primaryGray,
+                                secondaryTextColor: UIColor = .fancy.darkAndLightTheme.primaryGray,
                                 secondaryTextFont: UIFont = RandomFont.primaryRegular18,
                                 editImage: UIImage? = nil,
                                 editAction: (() -> Void)? = nil) {
@@ -110,15 +110,15 @@ public final class CustomDoubleTextHeaderCollectionCell: UICollectionReusableVie
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
     secondaryLabel.font = RandomFont.primaryRegular18
-    secondaryLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    secondaryLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     secondaryLabel.textAlignment = .right
     secondaryLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
     
     primaryLabel.font = RandomFont.primaryRegular18
-    primaryLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    primaryLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     primaryLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
     
     editButton.addTarget(self, action: #selector(editButtonTapped), for: .touchUpInside)

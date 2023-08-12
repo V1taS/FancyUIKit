@@ -88,7 +88,7 @@ private extension OnboardingContainerView {
   }
   
   func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     
     lottieAnimationView.contentMode = .scaleAspectFit
     lottieAnimationView.setContentHuggingPriority(.defaultHigh, for: .vertical)
@@ -97,7 +97,7 @@ private extension OnboardingContainerView {
     titleLabel.textAlignment = .center
     titleLabel.numberOfLines = 1
     titleLabel.font = RandomFont.primaryBold32
-    titleLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    titleLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     titleLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
     titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
     titleLabel.adjustsFontSizeToFitWidth = true
@@ -108,7 +108,7 @@ private extension OnboardingContainerView {
     descriptionLabel.adjustsFontSizeToFitWidth = true
     descriptionLabel.minimumScaleFactor = 0.9
     descriptionLabel.font = RandomFont.primaryMedium18
-    descriptionLabel.textColor = RandomColor.darkAndLightTheme.primaryGray
+    descriptionLabel.textColor = .fancy.darkAndLightTheme.primaryGray
   }
 }
 

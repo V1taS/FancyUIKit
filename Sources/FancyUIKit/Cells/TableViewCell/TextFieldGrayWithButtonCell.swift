@@ -48,11 +48,11 @@ public final class TextFieldGrayWithButtonCell: UITableViewCell {
   public func configureCellWith(textField: TextFieldView,
                                 textFieldBorderColor: UIColor? = nil,
                                 buttonImage: UIImage?,
-                                buttonImageColor: UIColor? = RandomColor.only.primaryGreen,
+                                buttonImageColor: UIColor? = .fancy.only.primaryGreen,
                                 buttonAction: (() -> Void)? = nil) {
     self.textField = textField
     textField.font = RandomFont.primaryMedium18
-    textField.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    textField.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     if let textFieldBorderColor = textFieldBorderColor {
       self.textField?.layer.borderColor = textFieldBorderColor.cgColor
     }
@@ -100,8 +100,8 @@ public final class TextFieldGrayWithButtonCell: UITableViewCell {
   }
   
   private func applyDefaultBehavior() {
-    backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
-    contentView.backgroundColor = RandomColor.darkAndLightTheme.primaryWhite
+    backgroundColor = .fancy.darkAndLightTheme.primaryWhite
+    contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
     buttonImageView.contentMode = .right
