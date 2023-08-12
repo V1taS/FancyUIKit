@@ -14,7 +14,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     guard let scene = (scene as? UIWindowScene) else { return }
     let window = UIWindow(windowScene: scene)
-    let rootViewController = MainScreenAssembly().createModule()
+    let rootViewController = CellsScreenAssembly()
+      .createModule(keyboardService: DefaultKeyboardService())
     window.overrideUserInterfaceStyle = .light
     window.makeKeyAndVisible()
     window.rootViewController = UINavigationController(rootViewController: rootViewController)
