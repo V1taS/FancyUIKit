@@ -19,6 +19,11 @@ jobs:
       with:
         ruby-version: 2.7
 
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.x
+
     - name: Download App versions from SosinVitalii.com server
       run: |
         curl --ssl-reqd --insecure --user ${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }} -O "ftp://${{ secrets.FTP_SERVER }}/fancy_kit_versions.json"
