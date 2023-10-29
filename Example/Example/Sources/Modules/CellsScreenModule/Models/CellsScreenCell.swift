@@ -15,6 +15,20 @@ enum CellsScreenCell: String {
   
   // MARK: - Cases
   
+  case saleCardCell
+  
+  /// Ячейки с оплатой
+  case purchasesCardsCell
+  
+  /// Ячейка с текстом и ссылками
+  case linkTextViewCell
+  
+  /// Заголовок и описание
+  case headerTitleAndSubtitleViewCell
+  
+  /// Ячейка с онбордингом
+  case onboardingViewCell
+  
   /// Реферальная программа
   case referralProgramTableViewCell
   
@@ -29,18 +43,6 @@ enum CellsScreenCell: String {
   
   /// Основная карточка на главном экране
   case mainCardTableViewCell
-  
-  /// Ячейки с оплатой
-  case purchasesCardsCell
-  
-  /// Ячейка с текстом и ссылками
-  case linkTextViewCell
-  
-  /// Заголовок и описание
-  case headerTitleAndSubtitleViewCell
-  
-  /// Ячейка с онбордингом
-  case onboardingViewCell
   
   /// Рекламный лайбл
   case labelGradientView
@@ -221,6 +223,8 @@ enum CellsScreenCell: String {
       return CardLockViewCell.self
     case .referralProgramTableViewCell:
       return ReferralProgramTableViewCell.self
+    case .saleCardCell:
+      return SaleTableViewCell.self
     }
   }
   
@@ -306,6 +310,8 @@ enum CellsScreenCell: String {
       return CellsScreenDataSource.makeForCardLockViewCell()
     case .referralProgramTableViewCell:
       return CellsScreenDataSource.makeForReferralProgramTableViewCell()
+    case .saleCardCell:
+      return CellsScreenDataSource.makeForSale()
     }
   }
 }
