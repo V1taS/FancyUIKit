@@ -23,8 +23,6 @@ public final class SaleTableViewCell: UITableViewCell {
   private let newPriceLabel = UILabel()
   private let titleLabel = UILabel()
   private let strikeThroughView = DiagonalStrikeThroughView()
-  
-  private let horizontalStack = UIStackView()
   private let verticalStack = UIStackView()
   
   // MARK: - Initilisation
@@ -38,6 +36,11 @@ public final class SaleTableViewCell: UITableViewCell {
   
   public required init?(coder aDecoder: NSCoder) {
     fatalError()
+  }
+  
+  public override func layoutSubviews() {
+    super.layoutSubviews()
+    strikeThroughView.setNeedsDisplay()
   }
   
   // MARK: - Public func
@@ -62,18 +65,15 @@ public final class SaleTableViewCell: UITableViewCell {
   
   private func configureLayout() {
     let appearance = Appearance()
-    
-    [UIView(), oldPriceLabel, newPriceLabel, UIView()].forEach {
+    [strikeThroughView].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
-      horizontalStack.addArrangedSubview($0)
+      oldPriceLabel.addSubview($0)
     }
-    
-    [titleLabel, horizontalStack].forEach {
+    [titleLabel, oldPriceLabel, newPriceLabel].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
       verticalStack.addArrangedSubview($0)
     }
-    
-    [verticalStack, strikeThroughView].forEach {
+    [verticalStack].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
       contentView.addSubview($0)
     }
@@ -100,19 +100,18 @@ public final class SaleTableViewCell: UITableViewCell {
     contentView.backgroundColor = .fancy.darkAndLightTheme.primaryWhite
     selectionStyle = .none
     
-    oldPriceLabel.textColor = .fancy.darkAndLightTheme.secondaryGray
-    oldPriceLabel.font = .fancy.primaryBold32
+    oldPriceLabel.textColor = .fancy.darkAndLightTheme.primaryGray
+    oldPriceLabel.font = .fancy.primaryRegular32
     newPriceLabel.textColor = .fancy.darkAndLightTheme.primaryGray
     newPriceLabel.font = .fancy.primaryBold32
     
     titleLabel.textColor = .fancy.only.primaryRed
     titleLabel.font = .fancy.primaryBold32
     
-    horizontalStack.axis = .horizontal
-    horizontalStack.spacing = 16
     verticalStack.axis = .vertical
     verticalStack.alignment = .center
     verticalStack.spacing = 8
+    verticalStack.setCustomSpacing(16, after: titleLabel)
   }
 }
 
@@ -123,4 +122,3 @@ private extension SaleTableViewCell {
     let insets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
   }
 }
-
