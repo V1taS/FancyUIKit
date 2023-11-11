@@ -107,6 +107,8 @@ public final class SaleTableViewCell: UITableViewCell {
     
     titleLabel.textColor = .fancy.only.primaryRed
     titleLabel.font = .fancy.primaryBold32
+    titleLabel.numberOfLines = .zero
+    titleLabel.textAlignment = .center
     
     verticalStack.axis = .vertical
     verticalStack.alignment = .center
