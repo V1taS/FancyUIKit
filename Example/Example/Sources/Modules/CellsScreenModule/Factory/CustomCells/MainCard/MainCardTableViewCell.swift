@@ -30,6 +30,20 @@ final class MainCardTableViewCell: UITableViewCell {
     public required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
+  
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    
+    cardView.configureWith(
+      imageCard: nil,
+      titleCard: nil,
+      isShowADVLabel: false,
+      titleADVText: nil,
+      isDisabled: false,
+      gradientColors: nil,
+      gradientDVLabel: nil
+    )
+  }
     
     // MARK: - Public func
     
