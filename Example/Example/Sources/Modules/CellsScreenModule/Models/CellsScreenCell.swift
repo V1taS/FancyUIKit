@@ -15,6 +15,9 @@ enum CellsScreenCell: String {
   
   // MARK: - Cases
   
+  /// Основная карточка на главном экране
+  case mainCardTableViewCell
+  
   case saleCardCell
   
   /// Ячейки с оплатой
@@ -40,9 +43,6 @@ enum CellsScreenCell: String {
   
   /// Вью и ячейка для коллекции с игроком
   case playerViewAndCell
-  
-  /// Основная карточка на главном экране
-  case mainCardTableViewCell
   
   /// Рекламный лайбл
   case labelGradientView

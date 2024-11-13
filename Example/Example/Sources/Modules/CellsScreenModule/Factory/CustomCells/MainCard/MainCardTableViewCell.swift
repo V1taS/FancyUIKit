@@ -41,19 +41,22 @@ final class MainCardTableViewCell: UITableViewCell {
     ///  - isShowADVLabel: Включить рекламный лайбл
     ///  - titleADVText: Заголовок на рекламном лайбле
     ///  - isDisabled: Карточка выключена
+    ///  - gradientColors: Градиент фона
     public func configureCellWith(titleCell: String?,
                                   imageCard: UIImage?,
                                   titleCard: String?,
                                   isShowADVLabel: Bool,
                                   titleADVText: String?,
-                                  isDisabled: Bool) {
+                                  isDisabled: Bool,
+                                  gradientColors: [UIColor]? = nil) {
         titleLabel.text = titleCell
         
         cardView.configureWith(imageCard: imageCard,
                                titleCard: titleCard,
                                isShowADVLabel: isShowADVLabel,
                                titleADVText: titleADVText,
-                               isDisabled: isDisabled)
+                               isDisabled: isDisabled,
+                               gradientColors: gradientColors)
     }
     
     // MARK: - Private func

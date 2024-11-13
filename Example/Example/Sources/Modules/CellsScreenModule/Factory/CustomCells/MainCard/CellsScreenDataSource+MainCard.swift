@@ -16,6 +16,7 @@ struct MainCardModel: CellModel {
   let isShowADVLabel: Bool
   let titleADVText: String?
   let isDisabled: Bool
+  let gradientColors: [UIColor]?
   
   var titleCell: String
   var reuseIdentifier = CellsScreenCell.mainCardTableViewCell.reuseIdentifier
@@ -25,22 +26,27 @@ extension CellsScreenDataSource where Model == MainCardModel {
   static func makeForMainCard() -> CellsScreenDataSource {
     let models = [
       MainCardModel(imageCard: UIImage(systemName: "film"),
-                    titleCard: "Фильмы",
+                    titleCard: "Фильмы Фильмы Фильмы Фильмы Фильмы Фильмы",
                     isShowADVLabel: true,
-                    titleADVText: "ХИТ",
+                    titleADVText: "Реклама",
                     isDisabled: false,
+                    gradientColors: nil,
+                    titleCell: "MainCardView"),
+      MainCardModel(imageCard: nil,
+                    titleCard: "Место сдается",
+                    isShowADVLabel: true,
+                    titleADVText: "Реклама",
+                    isDisabled: false,
+                    gradientColors: [
+                      .yellow, .red
+                    ],
                     titleCell: "MainCardView"),
       MainCardModel(imageCard: UIImage(systemName: "number"),
                     titleCard: "Число",
                     isShowADVLabel: false,
-                    titleADVText: nil,
-                    isDisabled: false,
-                    titleCell: "MainCardView"),
-      MainCardModel(imageCard: UIImage(systemName: "number"),
-                    titleCard: "Число",
-                    isShowADVLabel: true,
                     titleADVText: "Premium",
-                    isDisabled: true,
+                    isDisabled: false,
+                    gradientColors: nil,
                     titleCell: "MainCardView")
     ]
     return CellsScreenDataSource(models: models) { (model, cell) in
@@ -52,7 +58,8 @@ extension CellsScreenDataSource where Model == MainCardModel {
                              titleCard: model.titleCard,
                              isShowADVLabel: model.isShowADVLabel,
                              titleADVText: model.titleADVText,
-                             isDisabled: model.isDisabled)
+                             isDisabled: model.isDisabled,
+                             gradientColors: model.gradientColors)
     }
   }
 }

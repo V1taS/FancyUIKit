@@ -27,6 +27,10 @@ public final class MainCardView: UIView {
   private let advLabelView = LabelGradientView()
   private let impactFeedback = UIImpactFeedbackGenerator(style: .light)
   private var isDisabledCard = false
+  private var gradientColors: [UIColor] = [
+    .fancy.only.primaryGreen,
+    .fancy.only.secondaryGreen
+  ]
   
   // MARK: - Initialization
   
@@ -50,11 +54,13 @@ public final class MainCardView: UIView {
   ///  - isShowADVLabel: Включить рекламный лайбл
   ///  - titleADVText: Заголовок на рекламном лайбле
   ///  - isDisabled: Карточка выключена
+  ///  - gradientColors: Градиент фона
   public func configureWith(imageCard: UIImage?,
                             titleCard: String?,
                             isShowADVLabel: Bool,
                             titleADVText: String?,
-                            isDisabled: Bool) {
+                            isDisabled: Bool,
+                            gradientColors: [UIColor]? = nil) {
     let colorWhite = isDisabled ? fancyColor.only.secondaryWhite : fancyColor.darkAndLightTheme.primaryWhite
     imageView.image = imageCard
     titleLabel.text = titleCard
@@ -67,6 +73,9 @@ public final class MainCardView: UIView {
                                                  .fancy.only.primaryPink])
     imageView.setImageColor(color: colorWhite)
     isDisabledCard = isDisabled
+    if let gradientColors {
+      self.gradientColors = gradientColors
+    }
     applyGradient()
   }
   
@@ -93,6 +102,9 @@ public final class MainCardView: UIView {
     }
     
     NSLayoutConstraint.activate([
+      self.widthAnchor.constraint(equalToConstant: appearance.cellWidthConstant),
+      self.heightAnchor.constraint(equalToConstant: appearance.cellHeightConstant),
+      
       imageView.heightAnchor.constraint(equalToConstant: appearance.imageViewSize.height),
       
       imageView.topAnchor.constraint(equalTo: topAnchor, constant: appearance.inset),
@@ -100,6 +112,7 @@ public final class MainCardView: UIView {
       
       titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -appearance.inset),
       titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -appearance.inset),
+      titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: appearance.inset),
       
       advLabelView.topAnchor.constraint(equalTo: topAnchor, constant: appearance.inset),
       advLabelView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -appearance.inset)
@@ -130,10 +143,7 @@ public final class MainCardView: UIView {
         .fancy.only.secondaryGray
       ]
     } else {
-      colors = [
-        .fancy.only.primaryGreen,
-        .fancy.only.secondaryGreen
-      ]
+      colors = gradientColors
     }
     
     guard let gradientLayer = layer as? CAGradientLayer else { return }
@@ -149,5 +159,8 @@ private extension MainCardView {
     let imageViewSize: CGSize = CGSize(width: 32, height: 32)
     let inset: CGFloat = 8
     let alphaCard: CGFloat = 0.9
+    
+    let cellWidthConstant = (UIScreen.main.bounds.width * 0.45) - 32
+    let cellHeightConstant: CGFloat = 90
   }
 }
