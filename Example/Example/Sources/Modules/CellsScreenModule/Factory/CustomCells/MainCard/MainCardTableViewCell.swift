@@ -42,13 +42,15 @@ final class MainCardTableViewCell: UITableViewCell {
     ///  - titleADVText: Заголовок на рекламном лайбле
     ///  - isDisabled: Карточка выключена
     ///  - gradientColors: Градиент фона
+    ///  - gradientDVLabel: Градиент рекламного лейбла
     public func configureCellWith(titleCell: String?,
                                   imageCard: UIImage?,
                                   titleCard: String?,
                                   isShowADVLabel: Bool,
                                   titleADVText: String?,
                                   isDisabled: Bool,
-                                  gradientColors: [UIColor]? = nil) {
+                                  gradientColors: [UIColor]? = nil,
+                                  gradientDVLabel: [UIColor]? = nil) {
         titleLabel.text = titleCell
         
         cardView.configureWith(imageCard: imageCard,
@@ -56,7 +58,8 @@ final class MainCardTableViewCell: UITableViewCell {
                                isShowADVLabel: isShowADVLabel,
                                titleADVText: titleADVText,
                                isDisabled: isDisabled,
-                               gradientColors: gradientColors)
+                               gradientColors: gradientColors,
+                               gradientDVLabel: gradientDVLabel)
     }
     
     // MARK: - Private func

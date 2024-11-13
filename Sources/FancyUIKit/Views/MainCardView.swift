@@ -31,6 +31,10 @@ public final class MainCardView: UIView {
     .fancy.only.primaryGreen,
     .fancy.only.secondaryGreen
   ]
+  private var gradientDVLabel: [UIColor] = [
+    .fancy.only.primaryRed,
+    .fancy.only.primaryPink
+  ]
   
   // MARK: - Initialization
   
@@ -55,22 +59,27 @@ public final class MainCardView: UIView {
   ///  - titleADVText: Заголовок на рекламном лайбле
   ///  - isDisabled: Карточка выключена
   ///  - gradientColors: Градиент фона
+  ///  - gradientDVLabel: Градиент рекламного лейбла
   public func configureWith(imageCard: UIImage?,
                             titleCard: String?,
                             isShowADVLabel: Bool,
                             titleADVText: String?,
                             isDisabled: Bool,
-                            gradientColors: [UIColor]? = nil) {
+                            gradientColors: [UIColor]? = nil,
+                            gradientDVLabel: [UIColor]? = nil) {
     let colorWhite = isDisabled ? fancyColor.only.secondaryWhite : fancyColor.darkAndLightTheme.primaryWhite
     imageView.image = imageCard
     titleLabel.text = titleCard
     titleLabel.textColor = colorWhite
     advLabelView.isHidden = !isShowADVLabel
     
+    if let gradientDVLabel {
+      self.gradientDVLabel = gradientDVLabel
+    }
+    
     advLabelView.configureWith(titleText: titleADVText,
                                textColor: colorWhite,
-                               gradientDVLabel: [.fancy.only.primaryRed,
-                                                 .fancy.only.primaryPink])
+                               gradientDVLabel: self.gradientDVLabel)
     imageView.setImageColor(color: colorWhite)
     isDisabledCard = isDisabled
     if let gradientColors {
